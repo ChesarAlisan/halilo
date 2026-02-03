@@ -1,0 +1,30 @@
+# Core Browser Automation
+playwright==1.41.0
+
+# HTML Parsing
+beautifulsoup4==4.12.3
+lxml==5.1.0
+
+# AI Integration (for fallback)
+openai==1.10.0
+
+# Configuration & Environment
+python-dotenv==1.0.0
+pydantic==2.5.3
+pydantic-settings==2.1.0
+
+# Logging
+loguru==0.7.2
+
+# Image Processing
+pillow==10.2.0
+
+# Notifications
+plyer==2.1.0
+
+# Scheduling
+schedule==1.2.1
+
+# Utilities
+requests==2.31.0
+python-dateutil==2.8.2

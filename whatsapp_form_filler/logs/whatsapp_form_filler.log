@@ -1,0 +1,1053 @@
+2026-01-26 20:19:14 | INFO     | Logging configured
+2026-01-26 20:19:14 | INFO     | ======================================================================
+2026-01-26 20:19:14 | INFO     | 🤖 WhatsApp Form Auto-Fill System - MVP Phase 1
+2026-01-26 20:19:14 | INFO     | ======================================================================
+2026-01-26 20:19:14 | INFO     | 👤 Student: Halil Eren Kepiç
+2026-01-26 20:19:14 | INFO     | 🆔 ID: 2306002093
+2026-01-26 20:19:14 | INFO     | 📁 Database: C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_filler\data\whatsapp_form_filler.db
+2026-01-26 20:19:14 | INFO     | 📂 Logs: C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_filler\logs
+2026-01-26 20:19:14 | INFO     | ======================================================================
+2026-01-26 20:19:14 | WARNING  | ⚠️  OpenAI API key not configured - AI fallback disabled
+2026-01-26 20:19:14 | INFO     | 🎭 Initializing Form Filling Orchestrator...
+2026-01-26 20:19:14 | INFO     | 🧠 Form Intelligence Agent initialized with 3 plugins
+2026-01-26 20:19:14 | INFO     | Creating database...
+2026-01-26 20:19:14 | SUCCESS  | ✅ Database created
+2026-01-26 20:19:14 | INFO     | 📝 Verification & Logging Agent initialized
+2026-01-26 20:19:14 | SUCCESS  | ✅ Orchestrator initialized
+2026-01-26 20:19:14 | INFO     | 🚀 Starting orchestrator...
+2026-01-26 20:19:14 | INFO     | 🚀 Starting browser automation agent...
+2026-01-26 20:19:14 | ERROR    | Fatal error: It looks like you are using Playwright Sync API inside the asyncio loop.
+Please use the Async API instead.
+Traceback (most recent call last):
+
+> File "C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_filler\main.py", line 112, in <module>
+    asyncio.run(main())
+    │       │   └ <function main at 0x0000026FB70BB2E0>
+    │       └ <function run at 0x0000026FB46EC360>
+    └ <module 'asyncio' from 'C:\\Users\\90505\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\asyncio\\__init__.py'>
+
+  File "C:\Users\90505\AppData\Local\Programs\Python\Python313\Lib\asyncio\runners.py", line 195, in run
+    return runner.run(main)
+           │      │   └ <coroutine object main at 0x0000026FB7013340>
+           │      └ <function Runner.run at 0x0000026FB65DB060>
+           └ <asyncio.runners.Runner object at 0x0000026FB7036270>
+  File "C:\Users\90505\AppData\Local\Programs\Python\Python313\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           │    │                        └ <Task finished name='Task-1' coro=<main() done, defined at C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_filler\main.p...
+           │    └ None
+           └ <asyncio.runners.Runner object at 0x0000026FB7036270>
+  File "C:\Users\90505\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 719, in run_until_complete
+    return future.result()
+           │      └ <method 'result' of '_asyncio.Task' objects>
+           └ <Task finished name='Task-1' coro=<main() done, defined at C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_filler\main.p...
+
+  File "C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_filler\main.py", line 61, in main
+    with FormFillingOrchestrator() as orchestrator:
+         └ <class 'orchestrator.FormFillingOrchestrator'>
+
+  File "C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_filler\orchestrator.py", line 237, in __enter__
+    self.start()
+    │    └ <function FormFillingOrchestrator.start at 0x0000026FB7ED93A0>
+    └ <orchestrator.FormFillingOrchestrator object at 0x0000026FB6BD01A0>
+
+  File "C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_filler\orchestrator.py", line 224, in start
+    self.browser_agent.start()
+    │    │             └ <function BrowserAutomationAgent.start at 0x0000026FB7B8A840>
+    │    └ <agents.browser_automation.BrowserAutomationAgent object at 0x0000026FB6ACFE00>
+    └ <orchestrator.FormFillingOrchestrator object at 0x0000026FB6BD01A0>
+
+  File "C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_filler\agents\browser_automation.py", line 38, in start
+    self.playwright = sync_playwright().start()
+    │    │            └ <function sync_playwright at 0x0000026FB710A480>
+    │    └ None
+    └ <agents.browser_automation.BrowserAutomationAgent object at 0x0000026FB6ACFE00>
+
+  File "C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_filler\venv\Lib\site-packages\playwright\sync_api\_context_manager.py", line 84, in start
+    return self.__enter__()
+           │    └ <function PlaywrightContextManager.__enter__ at 0x0000026FB7B8AD40>
+           └ <playwright.sync_api._context_manager.PlaywrightContextManager object at 0x0000026FB7DEF620>
+  File "C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_filler\venv\Lib\site-packages\playwright\sync_api\_context_manager.py", line 47, in __enter__
+    raise Error(
+          └ <class 'playwright._impl._errors.Error'>
+
+playwright._impl._errors.Error: It looks like you are using Playwright Sync API inside the asyncio loop.
+Please use the Async API instead.
+2026-01-26 20:26:03 | INFO     | Logging configured
+2026-01-26 20:26:03 | INFO     | ======================================================================
+2026-01-26 20:26:03 | INFO     | 🤖 WhatsApp Form Auto-Fill System - MVP Phase 1
+2026-01-26 20:26:03 | INFO     | ======================================================================
+2026-01-26 20:26:03 | INFO     | 👤 Student: Halil Eren Kepiç
+2026-01-26 20:26:03 | INFO     | 🆔 ID: 2306002093
+2026-01-26 20:26:03 | INFO     | 📁 Database: C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_filler\data\whatsapp_form_filler.db
+2026-01-26 20:26:03 | INFO     | 📂 Logs: C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_filler\logs
+2026-01-26 20:26:03 | INFO     | ======================================================================
+2026-01-26 20:26:03 | WARNING  | ⚠️  OpenAI API key not configured - AI fallback disabled
+2026-01-26 20:26:03 | INFO     | 🎭 Initializing Form Filling Orchestrator...
+2026-01-26 20:26:03 | INFO     | 🧠 Form Intelligence Agent initialized with 3 plugins
+2026-01-26 20:26:03 | INFO     | 📝 Verification & Logging Agent initialized
+2026-01-26 20:26:03 | SUCCESS  | ✅ Orchestrator initialized
+2026-01-26 20:26:03 | INFO     | 🚀 Starting orchestrator...
+2026-01-26 20:26:03 | INFO     | 🚀 Starting browser automation agent...
+2026-01-26 20:26:04 | SUCCESS  | ✅ Browser started successfully
+2026-01-26 20:26:04 | INFO     | 
+======================================================================
+2026-01-26 20:26:04 | INFO     | 🧪 TEST MODE
+2026-01-26 20:26:04 | INFO     | ======================================================================
+2026-01-26 20:26:04 | INFO     | 
+Paste a Microsoft Forms URL to test (or 'quit' to exit):
+
+2026-01-26 20:44:50 | INFO     | Logging configured
+2026-01-26 20:44:50 | INFO     | ======================================================================
+2026-01-26 20:44:50 | INFO     | 🤖 WhatsApp Form Auto-Fill System - MVP Phase 1
+2026-01-26 20:44:50 | INFO     | ======================================================================
+2026-01-26 20:44:50 | INFO     | 👤 Student: Halil Eren Kepiç
+2026-01-26 20:44:50 | INFO     | 🆔 ID: 2306002093
+2026-01-26 20:44:50 | INFO     | 📁 Database: C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_filler\data\whatsapp_form_filler.db
+2026-01-26 20:44:50 | INFO     | 📂 Logs: C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_filler\logs
+2026-01-26 20:44:50 | INFO     | ======================================================================
+2026-01-26 20:44:50 | WARNING  | ⚠️  OpenAI API key not configured - AI fallback disabled
+2026-01-26 20:44:50 | INFO     | 🎭 Initializing Form Filling Orchestrator...
+2026-01-26 20:44:50 | INFO     | 🧠 Form Intelligence Agent initialized with 3 plugins
+2026-01-26 20:44:50 | INFO     | 📝 Verification & Logging Agent initialized
+2026-01-26 20:44:50 | SUCCESS  | ✅ Orchestrator initialized
+2026-01-26 20:44:50 | INFO     | 🚀 Starting orchestrator...
+2026-01-26 20:44:50 | INFO     | 🚀 Starting browser automation agent...
+2026-01-26 20:44:52 | SUCCESS  | ✅ Browser started successfully
+2026-01-26 20:44:52 | INFO     | 
+======================================================================
+2026-01-26 20:44:52 | INFO     | 🧪 TEST MODE
+2026-01-26 20:44:52 | INFO     | ======================================================================
+2026-01-26 20:44:52 | INFO     | 
+Paste a Microsoft Forms URL to test (or 'quit' to exit):
+
+2026-01-26 20:48:29 | INFO     | Logging configured
+2026-01-26 20:48:29 | INFO     | ======================================================================
+2026-01-26 20:48:29 | INFO     | 🤖 WhatsApp Form Auto-Fill System - MVP Phase 1
+2026-01-26 20:48:29 | INFO     | ======================================================================
+2026-01-26 20:48:29 | INFO     | 👤 Student: Halil Eren Kepiç
+2026-01-26 20:48:29 | INFO     | 🆔 ID: 2306002093
+2026-01-26 20:48:29 | INFO     | 📁 Database: C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_filler\data\whatsapp_form_filler.db
+2026-01-26 20:48:29 | INFO     | 📂 Logs: C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_filler\logs
+2026-01-26 20:48:29 | INFO     | ======================================================================
+2026-01-26 20:48:29 | WARNING  | ⚠️  OpenAI API key not configured - AI fallback disabled
+2026-01-26 20:48:29 | INFO     | 🎭 Initializing Form Filling Orchestrator...
+2026-01-26 20:48:29 | INFO     | 🧠 Form Intelligence Agent initialized with 3 plugins
+2026-01-26 20:48:29 | INFO     | 📝 Verification & Logging Agent initialized
+2026-01-26 20:48:29 | SUCCESS  | ✅ Orchestrator initialized
+2026-01-26 20:48:29 | INFO     | 🚀 Starting orchestrator...
+2026-01-26 20:48:29 | INFO     | 🚀 Starting browser automation agent...
+2026-01-26 20:48:31 | SUCCESS  | ✅ Browser started successfully
+2026-01-26 20:48:31 | INFO     | 
+======================================================================
+2026-01-26 20:48:31 | INFO     | 🧪 TEST MODE
+2026-01-26 20:48:31 | INFO     | ======================================================================
+2026-01-26 20:48:31 | INFO     | 
+Paste a Microsoft Forms URL to test (or 'quit' to exit):
+
+2026-01-26 20:48:47 | INFO     | 
+============================================================
+2026-01-26 20:48:47 | INFO     | 🎯 Processing form: https://forms.office.com/Pages/ResponsePage.aspx?id=gCO8a9-CREaDOE-no4zyBZ_AEcdYFppHgDZ0tyK76ldUNzUwUjdPR0YxWEhFQ1IyMlBFRDdGN0w5Ry4u
+2026-01-26 20:48:47 | INFO     | ============================================================
+
+2026-01-26 20:48:47 | INFO     | ⏳ Checking rate limits...
+2026-01-26 20:48:47 | INFO     | Step 1/6: Opening form...
+2026-01-26 20:48:47 | INFO     | 🌐 Navigating to: https://forms.office.com/Pages/ResponsePage.aspx?id=gCO8a9-CREaDOE-no4zyBZ_AEcdYFppHgDZ0tyK76ldUNzUwUjdPR0YxWEhFQ1IyMlBFRDdGN0w5Ry4u
+2026-01-26 20:48:48 | SUCCESS  | ✅ Navigation complete
+2026-01-26 20:48:49 | INFO     | Step 2/6: Analyzing form structure...
+2026-01-26 20:48:49 | INFO     | 🔍 Starting form analysis...
+2026-01-26 20:48:49 | INFO     | ✅ Provider identified: microsoft_forms
+2026-01-26 20:48:49 | INFO     | 🔍 Analyzing Microsoft Forms structure...
+2026-01-26 20:48:59 | ERROR    | Form did not load properly: Page.wait_for_selector: Timeout 10000ms exceeded.
+Call log:
+  - waiting for locator("[data-automation-id=\"questionItem\"]") to be visible
+
+2026-01-26 20:48:59 | ERROR    | ❌ Form analysis failed
+2026-01-26 20:48:59 | ERROR    | 
+❌ FAILED: Form analysis failed
+
+2026-01-26 20:48:59 | INFO     | 🔍 Verifying submission...
+2026-01-26 20:48:59 | ERROR    | ❌ Submission failed
+2026-01-26 20:48:59 | ERROR    | Unexpected error: 'str' object has no attribute 'value'
+Traceback (most recent call last):
+
+  File "C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_filler\orchestrator.py", line 107, in process_form
+    raise Exception("Form analysis failed")
+
+Exception: Form analysis failed
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_filler\main.py", line 111, in <module>
+    main()
+    └ <function main at 0x0000024AC133F2E0>
+
+> File "C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_filler\main.py", line 83, in main
+    success = orchestrator.process_form(form_url)
+              │            │            └ 'https://forms.office.com/Pages/ResponsePage.aspx?id=gCO8a9-CREaDOE-no4zyBZ_AEcdYFppHgDZ0tyK76ldUNzUwUjdPR0YxWEhFQ1IyMlBFRDdG...
+              │            └ <function FormFillingOrchestrator.process_form at 0x0000024AC1389800>
+              └ <orchestrator.FormFillingOrchestrator object at 0x0000024AC06801A0>
+
+  File "C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_filler\orchestrator.py", line 193, in process_form
+    self.verification_agent.verify_and_log(
+    │    │                  └ <function VerificationLoggerAgent.verify_and_log at 0x0000024AC195A0C0>
+    │    └ <agents.verification_logger.VerificationLoggerAgent object at 0x0000024AC0AB6270>
+    └ <orchestrator.FormFillingOrchestrator object at 0x0000024AC06801A0>
+
+  File "C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_filler\agents\verification_logger.py", line 150, in verify_and_log
+    submission_id = self._save_to_database(submission)
+                    │    │                 └ FormSubmission(id=None, timestamp=datetime.datetime(2026, 1, 26, 20, 48, 59, 542668), form_url='https://forms.office.com/Page...
+                    │    └ <function VerificationLoggerAgent._save_to_database at 0x0000024AC195A160>
+                    └ <agents.verification_logger.VerificationLoggerAgent object at 0x0000024AC0AB6270>
+
+  File "C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_filler\agents\verification_logger.py", line 194, in _save_to_database
+    submission.form_provider.value,
+    │          └ 'microsoft_forms'
+    └ FormSubmission(id=None, timestamp=datetime.datetime(2026, 1, 26, 20, 48, 59, 542668), form_url='https://forms.office.com/Page...
+
+AttributeError: 'str' object has no attribute 'value'
+2026-01-26 20:52:09 | INFO     | 
+
+👋 Interrupted by user, exiting...
+2026-01-26 20:52:09 | INFO     | 🛑 Stopping orchestrator...
+2026-01-26 20:52:09 | INFO     | 🛑 Closing browser...
+2026-01-26 20:52:09 | WARNING  | Could not save session: BrowserContext.storage_state: Target page, context or browser has been closed
+2026-01-26 20:52:09 | SUCCESS  | ✅ Browser closed
+2026-01-26 20:52:09 | INFO     | 
+📊 Daily Stats: {'total': 0, 'successful': 0, 'failed': 0, 'captcha': 0, 'avg_processing_time': 0.0}
+
+2026-01-26 20:52:09 | INFO     | 
+======================================================================
+2026-01-26 20:52:09 | INFO     | 🛑 System shutdown complete
+2026-01-26 20:52:09 | INFO     | ======================================================================
+2026-01-26 20:55:18 | INFO     | Logging configured
+2026-01-26 20:55:18 | INFO     | ======================================================================
+2026-01-26 20:55:18 | INFO     | 🤖 WhatsApp Form Auto-Fill System - MVP Phase 1
+2026-01-26 20:55:18 | INFO     | ======================================================================
+2026-01-26 20:55:18 | INFO     | 👤 Student: Halil Eren Kepiç
+2026-01-26 20:55:18 | INFO     | 🆔 ID: 2306002093
+2026-01-26 20:55:18 | INFO     | 📁 Database: C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_filler\data\whatsapp_form_filler.db
+2026-01-26 20:55:18 | INFO     | 📂 Logs: C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_filler\logs
+2026-01-26 20:55:18 | INFO     | ======================================================================
+2026-01-26 20:55:18 | WARNING  | ⚠️  OpenAI API key not configured - AI fallback disabled
+2026-01-26 20:55:18 | INFO     | 🎭 Initializing Form Filling Orchestrator...
+2026-01-26 20:55:18 | INFO     | 🧠 Form Intelligence Agent initialized with 3 plugins
+2026-01-26 20:55:18 | INFO     | 📝 Verification & Logging Agent initialized
+2026-01-26 20:55:18 | SUCCESS  | ✅ Orchestrator initialized
+2026-01-26 20:55:18 | INFO     | 🚀 Starting orchestrator...
+2026-01-26 20:55:18 | INFO     | 🚀 Starting browser automation agent...
+2026-01-26 20:55:19 | SUCCESS  | ✅ Browser started successfully
+2026-01-26 20:55:19 | INFO     | 
+======================================================================
+2026-01-26 20:55:19 | INFO     | 🧪 TEST MODE
+2026-01-26 20:55:19 | INFO     | ======================================================================
+2026-01-26 20:55:19 | INFO     | 
+Paste a Microsoft Forms URL to test (or 'quit' to exit):
+
+2026-01-26 20:56:49 | INFO     | 
+
+👋 Interrupted by user, exiting...
+2026-01-26 20:56:49 | INFO     | 🛑 Stopping orchestrator...
+2026-01-26 20:56:49 | INFO     | 🛑 Closing browser...
+2026-01-26 20:56:49 | WARNING  | Could not save session: BrowserContext.storage_state: Target page, context or browser has been closed
+2026-01-26 20:56:49 | SUCCESS  | ✅ Browser closed
+2026-01-26 20:56:49 | INFO     | 
+📊 Daily Stats: {'total': 0, 'successful': 0, 'failed': 0, 'captcha': 0, 'avg_processing_time': 0.0}
+
+2026-01-26 20:56:49 | INFO     | 
+======================================================================
+2026-01-26 20:56:49 | INFO     | 🛑 System shutdown complete
+2026-01-26 20:56:49 | INFO     | ======================================================================
+2026-01-26 20:57:16 | INFO     | Logging configured
+2026-01-26 20:57:16 | INFO     | ======================================================================
+2026-01-26 20:57:16 | INFO     | 🤖 WhatsApp Form Auto-Fill System - MVP Phase 1
+2026-01-26 20:57:16 | INFO     | ======================================================================
+2026-01-26 20:57:16 | INFO     | 👤 Student: Halil Eren Kepiç
+2026-01-26 20:57:16 | INFO     | 🆔 ID: 2306002093
+2026-01-26 20:57:16 | INFO     | 📁 Database: C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_filler\data\whatsapp_form_filler.db
+2026-01-26 20:57:16 | INFO     | 📂 Logs: C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_filler\logs
+2026-01-26 20:57:16 | INFO     | ======================================================================
+2026-01-26 20:57:16 | WARNING  | ⚠️  OpenAI API key not configured - AI fallback disabled
+2026-01-26 20:57:16 | INFO     | 🎭 Initializing Form Filling Orchestrator...
+2026-01-26 20:57:16 | INFO     | 🧠 Form Intelligence Agent initialized with 3 plugins
+2026-01-26 20:57:16 | INFO     | 📝 Verification & Logging Agent initialized
+2026-01-26 20:57:16 | SUCCESS  | ✅ Orchestrator initialized
+2026-01-26 20:57:16 | INFO     | 🚀 Starting orchestrator...
+2026-01-26 20:57:16 | INFO     | 🚀 Starting browser automation agent...
+2026-01-26 20:57:17 | SUCCESS  | ✅ Browser started successfully
+2026-01-26 20:57:17 | INFO     | 
+======================================================================
+2026-01-26 20:57:17 | INFO     | 🧪 TEST MODE
+2026-01-26 20:57:17 | INFO     | ======================================================================
+2026-01-26 20:57:17 | INFO     | 
+Paste a Microsoft Forms URL to test (or 'quit' to exit):
+
+2026-01-26 20:57:31 | INFO     | 
+============================================================
+2026-01-26 20:57:31 | INFO     | 🎯 Processing form: https://forms.office.com/Pages/ResponsePage.aspx?id=gCO8a9-CREaDOE-no4zyBZ_AEcdYFppHgDZ0tyK76ldUNzUwUjdPR0YxWEhFQ1IyMlBFRDdGN0w5Ry4u
+2026-01-26 20:57:31 | INFO     | ============================================================
+
+2026-01-26 20:57:31 | INFO     | ⏳ Checking rate limits...
+2026-01-26 20:57:31 | INFO     | Step 1/6: Opening form...
+2026-01-26 20:57:31 | INFO     | 🌐 Navigating to: https://forms.office.com/Pages/ResponsePage.aspx?id=gCO8a9-CREaDOE-no4zyBZ_AEcdYFppHgDZ0tyK76ldUNzUwUjdPR0YxWEhFQ1IyMlBFRDdGN0w5Ry4u
+2026-01-26 20:57:33 | SUCCESS  | ✅ Navigation complete
+2026-01-26 20:57:33 | INFO     | Step 2/6: Analyzing form structure...
+2026-01-26 20:57:33 | INFO     | 🔍 Starting form analysis...
+2026-01-26 20:57:33 | INFO     | ✅ Provider identified: microsoft_forms
+2026-01-26 20:57:33 | INFO     | 🔍 Analyzing Microsoft Forms structure...
+2026-01-26 20:57:43 | ERROR    | Form did not load properly: Page.wait_for_selector: Timeout 10000ms exceeded.
+Call log:
+  - waiting for locator("[data-automation-id=\"questionItem\"]") to be visible
+
+2026-01-26 20:57:43 | ERROR    | ❌ Form analysis failed
+2026-01-26 20:57:43 | ERROR    | 
+❌ FAILED: Form analysis failed
+
+2026-01-26 20:57:43 | INFO     | 🔍 Verifying submission...
+2026-01-26 20:57:43 | ERROR    | ❌ Submission failed
+2026-01-26 20:57:43 | ERROR    | Unexpected error: 'str' object has no attribute 'value'
+Traceback (most recent call last):
+
+  File "C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_filler\orchestrator.py", line 107, in process_form
+    raise Exception("Form analysis failed")
+
+Exception: Form analysis failed
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_filler\main.py", line 111, in <module>
+    main()
+    └ <function main at 0x000001F96813F2E0>
+
+> File "C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_filler\main.py", line 83, in main
+    success = orchestrator.process_form(form_url)
+              │            │            └ 'https://forms.office.com/Pages/ResponsePage.aspx?id=gCO8a9-CREaDOE-no4zyBZ_AEcdYFppHgDZ0tyK76ldUNzUwUjdPR0YxWEhFQ1IyMlBFRDdG...
+              │            └ <function FormFillingOrchestrator.process_form at 0x000001F968189800>
+              └ <orchestrator.FormFillingOrchestrator object at 0x000001F967C901A0>
+
+  File "C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_filler\orchestrator.py", line 193, in process_form
+    self.verification_agent.verify_and_log(
+    │    │                  └ <function VerificationLoggerAgent.verify_and_log at 0x000001F968F0A0C0>
+    │    └ <agents.verification_logger.VerificationLoggerAgent object at 0x000001F9680B6270>
+    └ <orchestrator.FormFillingOrchestrator object at 0x000001F967C901A0>
+
+  File "C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_filler\agents\verification_logger.py", line 150, in verify_and_log
+    submission_id = self._save_to_database(submission)
+                    │    │                 └ FormSubmission(id=None, timestamp=datetime.datetime(2026, 1, 26, 20, 57, 43, 783770), form_url='https://forms.office.com/Page...
+                    │    └ <function VerificationLoggerAgent._save_to_database at 0x000001F968F0A160>
+                    └ <agents.verification_logger.VerificationLoggerAgent object at 0x000001F9680B6270>
+
+  File "C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_filler\agents\verification_logger.py", line 194, in _save_to_database
+    submission.form_provider.value,
+    │          └ 'microsoft_forms'
+    └ FormSubmission(id=None, timestamp=datetime.datetime(2026, 1, 26, 20, 57, 43, 783770), form_url='https://forms.office.com/Page...
+
+AttributeError: 'str' object has no attribute 'value'
+2026-01-26 21:09:58 | INFO     | 
+============================================================
+2026-01-26 21:09:58 | INFO     | 🎯 Processing form: https://forms.office.com/Pages/ResponsePage.aspx?id=gCO8a9-CREaDOE-no4zyBZ_AEcdYFppHgDZ0tyK76ldUNzUwUjdPR0YxWEhFQ1IyMlBFRDdGN0w5Ry4u
+2026-01-26 21:09:58 | INFO     | ============================================================
+
+2026-01-26 21:09:58 | INFO     | ⏳ Checking rate limits...
+2026-01-26 21:09:58 | INFO     | Step 1/6: Opening form...
+2026-01-26 21:09:58 | INFO     | 🌐 Navigating to: https://forms.office.com/Pages/ResponsePage.aspx?id=gCO8a9-CREaDOE-no4zyBZ_AEcdYFppHgDZ0tyK76ldUNzUwUjdPR0YxWEhFQ1IyMlBFRDdGN0w5Ry4u
+2026-01-26 21:10:00 | SUCCESS  | ✅ Navigation complete
+2026-01-26 21:10:01 | INFO     | Step 2/6: Analyzing form structure...
+2026-01-26 21:10:01 | INFO     | 🔍 Starting form analysis...
+2026-01-26 21:10:01 | INFO     | ✅ Provider identified: microsoft_forms
+2026-01-26 21:10:01 | INFO     | 🔍 Analyzing Microsoft Forms structure...
+2026-01-26 21:10:11 | ERROR    | Form did not load properly: Page.wait_for_selector: Timeout 10000ms exceeded.
+Call log:
+  - waiting for locator("[data-automation-id=\"questionItem\"]") to be visible
+
+2026-01-26 21:10:11 | ERROR    | ❌ Form analysis failed
+2026-01-26 21:10:11 | ERROR    | 
+❌ FAILED: Form analysis failed
+
+2026-01-26 21:10:11 | INFO     | 🔍 Verifying submission...
+2026-01-26 21:10:11 | ERROR    | ❌ Submission failed
+2026-01-26 21:10:11 | ERROR    | Unexpected error: 'str' object has no attribute 'value'
+Traceback (most recent call last):
+
+  File "C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_filler\orchestrator.py", line 107, in process_form
+    raise Exception("Form analysis failed")
+
+Exception: Form analysis failed
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_filler\main.py", line 111, in <module>
+    main()
+    └ <function main at 0x000001F96813F2E0>
+
+> File "C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_filler\main.py", line 83, in main
+    success = orchestrator.process_form(form_url)
+              │            │            └ 'https://forms.office.com/Pages/ResponsePage.aspx?id=gCO8a9-CREaDOE-no4zyBZ_AEcdYFppHgDZ0tyK76ldUNzUwUjdPR0YxWEhFQ1IyMlBFRDdG...
+              │            └ <function FormFillingOrchestrator.process_form at 0x000001F968189800>
+              └ <orchestrator.FormFillingOrchestrator object at 0x000001F967C901A0>
+
+  File "C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_filler\orchestrator.py", line 193, in process_form
+    self.verification_agent.verify_and_log(
+    │    │                  └ <function VerificationLoggerAgent.verify_and_log at 0x000001F968F0A0C0>
+    │    └ <agents.verification_logger.VerificationLoggerAgent object at 0x000001F9680B6270>
+    └ <orchestrator.FormFillingOrchestrator object at 0x000001F967C901A0>
+
+  File "C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_filler\agents\verification_logger.py", line 150, in verify_and_log
+    submission_id = self._save_to_database(submission)
+                    │    │                 └ FormSubmission(id=None, timestamp=datetime.datetime(2026, 1, 26, 21, 10, 11, 264828), form_url='https://forms.office.com/Page...
+                    │    └ <function VerificationLoggerAgent._save_to_database at 0x000001F968F0A160>
+                    └ <agents.verification_logger.VerificationLoggerAgent object at 0x000001F9680B6270>
+
+  File "C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_filler\agents\verification_logger.py", line 194, in _save_to_database
+    submission.form_provider.value,
+    │          └ 'microsoft_forms'
+    └ FormSubmission(id=None, timestamp=datetime.datetime(2026, 1, 26, 21, 10, 11, 264828), form_url='https://forms.office.com/Page...
+
+AttributeError: 'str' object has no attribute 'value'
+2026-01-26 21:15:30 | INFO     | Logging configured
+2026-01-26 21:15:30 | INFO     | ======================================================================
+2026-01-26 21:15:30 | INFO     | 🤖 WhatsApp Form Auto-Fill System - MVP Phase 1
+2026-01-26 21:15:30 | INFO     | ======================================================================
+2026-01-26 21:15:30 | INFO     | 👤 Student: Halil Eren Kepiç
+2026-01-26 21:15:30 | INFO     | 🆔 ID: 2306002093
+2026-01-26 21:15:30 | INFO     | 📁 Database: C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_filler\data\whatsapp_form_filler.db
+2026-01-26 21:15:30 | INFO     | 📂 Logs: C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_filler\logs
+2026-01-26 21:15:30 | INFO     | ======================================================================
+2026-01-26 21:15:30 | WARNING  | ⚠️  OpenAI API key not configured - AI fallback disabled
+2026-01-26 21:15:30 | INFO     | 🎭 Initializing Form Filling Orchestrator...
+2026-01-26 21:15:30 | INFO     | 🧠 Form Intelligence Agent initialized with 3 plugins
+2026-01-26 21:15:30 | INFO     | 📝 Verification & Logging Agent initialized
+2026-01-26 21:15:30 | SUCCESS  | ✅ Orchestrator initialized
+2026-01-26 21:15:30 | INFO     | 🚀 Starting orchestrator...
+2026-01-26 21:15:30 | INFO     | 🚀 Starting browser automation agent...
+2026-01-26 21:15:30 | INFO     | 🔐 Using Chrome profile for authentication...
+2026-01-26 21:15:31 | WARNING  | Could not use Chrome profile: BrowserType.launch_persistent_context: Target page, context or browser has been closed
+Browser logs:
+
+<launching> C:\Program Files\Google\Chrome\Application\chrome.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=AcceptCHFrame,AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument,OptimizationHints --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --enable-automation --disable-infobars --disable-search-engine-choice-screen --disable-sync --no-sandbox --disable-blink-features=AutomationControlled --disable-dev-shm-usage --no-sandbox --disable-setuid-sandbox --disable-infobars --window-position=0,0 --ignore-certificate-errors --ignore-certificate-errors-spki-list --disable-blink-features --disable-features=IsolateOrigins,site-per-process --user-data-dir=C:\Users\90505\AppData\Local\Google\Chrome\User Data --remote-debugging-pipe about:blank
+<launched> pid=17080
+Call log:
+  - <launching> C:\Program Files\Google\Chrome\Application\chrome.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=AcceptCHFrame,AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument,OptimizationHints --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --enable-automation --disable-infobars --disable-search-engine-choice-screen --disable-sync --no-sandbox --disable-blink-features=AutomationControlled --disable-dev-shm-usage --no-sandbox --disable-setuid-sandbox --disable-infobars --window-position=0,0 --ignore-certificate-errors --ignore-certificate-errors-spki-list --disable-blink-features --disable-features=IsolateOrigins,site-per-process --user-data-dir=C:\Users\90505\AppData\Local\Google\Chrome\User Data --remote-debugging-pipe about:blank
+  - <launched> pid=17080
+  - [pid=17080] <gracefully close start>
+  - [pid=17080] <kill>
+  - [pid=17080] <will force kill>
+  - [pid=17080] taskkill stderr: ERROR: The process "17080" not found.
+  - [pid=17080] <process did exit: exitCode=21, signal=null>
+  - [pid=17080] starting temporary directories cleanup
+  - [pid=17080] finished temporary directories cleanup
+  - [pid=17080] <gracefully close end>
+
+2026-01-26 21:15:31 | INFO     | Falling back to Chromium...
+2026-01-26 21:15:31 | INFO     | Using Chromium with session file...
+2026-01-26 21:15:31 | SUCCESS  | ✅ Browser started successfully
+2026-01-26 21:15:31 | INFO     | 
+======================================================================
+2026-01-26 21:15:31 | INFO     | 🧪 TEST MODE
+2026-01-26 21:15:31 | INFO     | ======================================================================
+2026-01-26 21:15:31 | INFO     | 
+Paste a Microsoft Forms URL to test (or 'quit' to exit):
+
+2026-01-26 21:16:04 | INFO     | 
+============================================================
+2026-01-26 21:16:04 | INFO     | 🎯 Processing form: https://forms.office.com/Pages/ResponsePage.aspx?id=gCO8a9-CREaDOE-no4zyBZ_AEcdYFppHgDZ0tyK76ldUNzUwUjdPR0YxWEhFQ1IyMlBFRDdGN0w5Ry4u
+2026-01-26 21:16:04 | INFO     | ============================================================
+
+2026-01-26 21:16:04 | INFO     | ⏳ Checking rate limits...
+2026-01-26 21:16:04 | INFO     | Step 1/6: Opening form...
+2026-01-26 21:16:04 | INFO     | 🌐 Navigating to: https://forms.office.com/Pages/ResponsePage.aspx?id=gCO8a9-CREaDOE-no4zyBZ_AEcdYFppHgDZ0tyK76ldUNzUwUjdPR0YxWEhFQ1IyMlBFRDdGN0w5Ry4u
+2026-01-26 21:16:04 | ERROR    | Navigation failed: Page.goto: Target page, context or browser has been closed
+2026-01-26 21:16:04 | ERROR    | 
+❌ FAILED: Failed to navigate to form
+
+2026-01-26 21:16:04 | ERROR    | Screenshot failed: Page.screenshot: Target page, context or browser has been closed
+2026-01-26 21:16:04 | INFO     | ✅ Provider identified: microsoft_forms
+2026-01-26 21:16:04 | INFO     | 🔍 Verifying submission...
+2026-01-26 21:16:04 | ERROR    | Unexpected error: Page.inner_text: Target page, context or browser has been closed
+Traceback (most recent call last):
+
+  File "C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_filler\main.py", line 111, in <module>
+    main()
+    └ <function main at 0x000001F96813F2E0>
+
+> File "C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_filler\main.py", line 83, in main
+    success = orchestrator.process_form(form_url)
+              │            │            └ 'https://forms.office.com/Pages/ResponsePage.aspx?id=gCO8a9-CREaDOE-no4zyBZ_AEcdYFppHgDZ0tyK76ldUNzUwUjdPR0YxWEhFQ1IyMlBFRDdG...
+              │            └ <function FormFillingOrchestrator.process_form at 0x000001F968189800>
+              └ <orchestrator.FormFillingOrchestrator object at 0x000001F967C901A0>
+
+  File "C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_filler\orchestrator.py", line 193, in process_form
+    self.verification_agent.verify_and_log(
+    │    │                  └ <function VerificationLoggerAgent.verify_and_log at 0x000001F968F0A0C0>
+    │    └ <agents.verification_logger.VerificationLoggerAgent object at 0x000001F9680B6270>
+    └ <orchestrator.FormFillingOrchestrator object at 0x000001F967C901A0>
+
+  File "C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_filler\agents\verification_logger.py", line 115, in verify_and_log
+    page_text = page.inner_text('body')
+                │    └ <function Page.inner_text at 0x000001F968BCFBA0>
+                └ <Page url='https://forms.office.com/Pages/ResponsePage.aspx?id=gCO8a9-CREaDOE-no4zyBZ_AEcdYFppHgDZ0tyK76ldUNzUwUjdPR0YxWEhFQ1...
+
+  File "C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_filler\venv\Lib\site-packages\playwright\sync_api\_generated.py", line 10829, in inner_text
+    self._sync(
+    │    └ <function SyncBase._sync at 0x000001F968BA5300>
+    └ <Page url='https://forms.office.com/Pages/ResponsePage.aspx?id=gCO8a9-CREaDOE-no4zyBZ_AEcdYFppHgDZ0tyK76ldUNzUwUjdPR0YxWEhFQ1...
+  File "C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_filler\venv\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           │    └ <method 'result' of '_asyncio.Task' objects>
+           └ <Task finished name='Task-26' coro=<Page.inner_text() done, defined at C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_f...
+  File "C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_filler\venv\Lib\site-packages\playwright\_impl\_page.py", line 981, in inner_text
+    return await self._main_frame.inner_text(**locals_to_params(locals()))
+                 │    │           │            └ <function locals_to_params at 0x000001F968A0F100>
+                 │    │           └ <function Frame.inner_text at 0x000001F968B479C0>
+                 │    └ <Frame name= url='https://forms.office.com/Pages/ResponsePage.aspx?id=gCO8a9-CREaDOE-no4zyBZ_AEcdYFppHgDZ0tyK76ldUNzUwUjdPR0Y...
+                 └ <Page url='https://forms.office.com/Pages/ResponsePage.aspx?id=gCO8a9-CREaDOE-no4zyBZ_AEcdYFppHgDZ0tyK76ldUNzUwUjdPR0YxWEhFQ1...
+  File "C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_filler\venv\Lib\site-packages\playwright\_impl\_frame.py", line 712, in inner_text
+    return await self._channel.send(
+                 │    │        └ <function Channel.send at 0x000001F965722520>
+                 │    └ <playwright._impl._connection.Channel object at 0x000001F9690252B0>
+                 └ <Frame name= url='https://forms.office.com/Pages/ResponsePage.aspx?id=gCO8a9-CREaDOE-no4zyBZ_AEcdYFppHgDZ0tyK76ldUNzUwUjdPR0Y...
+  File "C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_filler\venv\Lib\site-packages\playwright\_impl\_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+                 │    │           └ <function Connection.wrap_api_call at 0x000001F968A4A480>
+                 │    └ <playwright._impl._connection.Connection object at 0x000001F968E178C0>
+                 └ <playwright._impl._connection.Channel object at 0x000001F9690252B0>
+  File "C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_filler\venv\Lib\site-packages\playwright\_impl\_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+          │                       └ {'frames': [{'file': 'C:\\Users\\90505\\OneDrive\\Desktop\\halilo\\whatsapp_form_filler\\agents\\verification_logger.py', 'li...
+          └ <function rewrite_error at 0x000001F96818AD40>
+
+playwright._impl._errors.TargetClosedError: Page.inner_text: Target page, context or browser has been closed
+2026-01-26 21:16:06 | INFO     | 
+============================================================
+2026-01-26 21:16:06 | INFO     | 🎯 Processing form: https://forms.office.com/Pages/ResponsePage.aspx?id=gCO8a9-CREaDOE-no4zyBZ_AEcdYFppHgDZ0tyK76ldUNzUwUjdPR0YxWEhFQ1IyMlBFRDdGN0w5Ry4u
+2026-01-26 21:16:06 | INFO     | ============================================================
+
+2026-01-26 21:16:06 | INFO     | ⏳ Checking rate limits...
+2026-01-26 21:16:06 | INFO     | Step 1/6: Opening form...
+2026-01-26 21:16:06 | INFO     | 🌐 Navigating to: https://forms.office.com/Pages/ResponsePage.aspx?id=gCO8a9-CREaDOE-no4zyBZ_AEcdYFppHgDZ0tyK76ldUNzUwUjdPR0YxWEhFQ1IyMlBFRDdGN0w5Ry4u
+2026-01-26 21:16:06 | ERROR    | Navigation failed: Page.goto: Target page, context or browser has been closed
+2026-01-26 21:16:06 | ERROR    | 
+❌ FAILED: Failed to navigate to form
+
+2026-01-26 21:16:06 | ERROR    | Screenshot failed: Page.screenshot: Target page, context or browser has been closed
+2026-01-26 21:16:06 | INFO     | ✅ Provider identified: microsoft_forms
+2026-01-26 21:16:06 | INFO     | 🔍 Verifying submission...
+2026-01-26 21:16:06 | ERROR    | Unexpected error: Page.inner_text: Target page, context or browser has been closed
+Traceback (most recent call last):
+
+  File "C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_filler\main.py", line 111, in <module>
+    main()
+    └ <function main at 0x000001F96813F2E0>
+
+> File "C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_filler\main.py", line 83, in main
+    success = orchestrator.process_form(form_url)
+              │            │            └ 'https://forms.office.com/Pages/ResponsePage.aspx?id=gCO8a9-CREaDOE-no4zyBZ_AEcdYFppHgDZ0tyK76ldUNzUwUjdPR0YxWEhFQ1IyMlBFRDdG...
+              │            └ <function FormFillingOrchestrator.process_form at 0x000001F968189800>
+              └ <orchestrator.FormFillingOrchestrator object at 0x000001F967C901A0>
+
+  File "C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_filler\orchestrator.py", line 193, in process_form
+    self.verification_agent.verify_and_log(
+    │    │                  └ <function VerificationLoggerAgent.verify_and_log at 0x000001F968F0A0C0>
+    │    └ <agents.verification_logger.VerificationLoggerAgent object at 0x000001F9680B6270>
+    └ <orchestrator.FormFillingOrchestrator object at 0x000001F967C901A0>
+
+  File "C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_filler\agents\verification_logger.py", line 115, in verify_and_log
+    page_text = page.inner_text('body')
+                │    └ <function Page.inner_text at 0x000001F968BCFBA0>
+                └ <Page url='https://forms.office.com/Pages/ResponsePage.aspx?id=gCO8a9-CREaDOE-no4zyBZ_AEcdYFppHgDZ0tyK76ldUNzUwUjdPR0YxWEhFQ1...
+
+  File "C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_filler\venv\Lib\site-packages\playwright\sync_api\_generated.py", line 10829, in inner_text
+    self._sync(
+    │    └ <function SyncBase._sync at 0x000001F968BA5300>
+    └ <Page url='https://forms.office.com/Pages/ResponsePage.aspx?id=gCO8a9-CREaDOE-no4zyBZ_AEcdYFppHgDZ0tyK76ldUNzUwUjdPR0YxWEhFQ1...
+  File "C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_filler\venv\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           │    └ <method 'result' of '_asyncio.Task' objects>
+           └ <Task finished name='Task-29' coro=<Page.inner_text() done, defined at C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_f...
+  File "C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_filler\venv\Lib\site-packages\playwright\_impl\_page.py", line 981, in inner_text
+    return await self._main_frame.inner_text(**locals_to_params(locals()))
+                 │    │           │            └ <function locals_to_params at 0x000001F968A0F100>
+                 │    │           └ <function Frame.inner_text at 0x000001F968B479C0>
+                 │    └ <Frame name= url='https://forms.office.com/Pages/ResponsePage.aspx?id=gCO8a9-CREaDOE-no4zyBZ_AEcdYFppHgDZ0tyK76ldUNzUwUjdPR0Y...
+                 └ <Page url='https://forms.office.com/Pages/ResponsePage.aspx?id=gCO8a9-CREaDOE-no4zyBZ_AEcdYFppHgDZ0tyK76ldUNzUwUjdPR0YxWEhFQ1...
+  File "C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_filler\venv\Lib\site-packages\playwright\_impl\_frame.py", line 712, in inner_text
+    return await self._channel.send(
+                 │    │        └ <function Channel.send at 0x000001F965722520>
+                 │    └ <playwright._impl._connection.Channel object at 0x000001F9690252B0>
+                 └ <Frame name= url='https://forms.office.com/Pages/ResponsePage.aspx?id=gCO8a9-CREaDOE-no4zyBZ_AEcdYFppHgDZ0tyK76ldUNzUwUjdPR0Y...
+  File "C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_filler\venv\Lib\site-packages\playwright\_impl\_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+                 │    │           └ <function Connection.wrap_api_call at 0x000001F968A4A480>
+                 │    └ <playwright._impl._connection.Connection object at 0x000001F968E178C0>
+                 └ <playwright._impl._connection.Channel object at 0x000001F9690252B0>
+  File "C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_filler\venv\Lib\site-packages\playwright\_impl\_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+          │                       └ {'frames': [{'file': 'C:\\Users\\90505\\OneDrive\\Desktop\\halilo\\whatsapp_form_filler\\agents\\verification_logger.py', 'li...
+          └ <function rewrite_error at 0x000001F96818AD40>
+
+playwright._impl._errors.TargetClosedError: Page.inner_text: Target page, context or browser has been closed
+2026-01-26 21:16:07 | INFO     | 
+
+👋 Interrupted by user, exiting...
+2026-01-26 21:16:07 | INFO     | 🛑 Stopping orchestrator...
+2026-01-26 21:16:07 | INFO     | 🛑 Closing browser...
+2026-01-26 21:16:07 | WARNING  | Could not save session: BrowserContext.storage_state: Target page, context or browser has been closed
+2026-01-26 21:16:08 | SUCCESS  | ✅ Browser closed
+2026-01-26 21:16:08 | INFO     | 
+📊 Daily Stats: {'total': 0, 'successful': 0, 'failed': 0, 'captcha': 0, 'avg_processing_time': 0.0}
+
+2026-01-26 21:16:08 | INFO     | 
+======================================================================
+2026-01-26 21:16:08 | INFO     | 🛑 System shutdown complete
+2026-01-26 21:16:08 | INFO     | ======================================================================
+2026-01-26 21:16:11 | INFO     | Logging configured
+2026-01-26 21:16:11 | INFO     | ======================================================================
+2026-01-26 21:16:11 | INFO     | 🤖 WhatsApp Form Auto-Fill System - MVP Phase 1
+2026-01-26 21:16:11 | INFO     | ======================================================================
+2026-01-26 21:16:11 | INFO     | 👤 Student: Halil Eren Kepiç
+2026-01-26 21:16:11 | INFO     | 🆔 ID: 2306002093
+2026-01-26 21:16:11 | INFO     | 📁 Database: C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_filler\data\whatsapp_form_filler.db
+2026-01-26 21:16:11 | INFO     | 📂 Logs: C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_filler\logs
+2026-01-26 21:16:11 | INFO     | ======================================================================
+2026-01-26 21:16:11 | WARNING  | ⚠️  OpenAI API key not configured - AI fallback disabled
+2026-01-26 21:16:11 | INFO     | 🎭 Initializing Form Filling Orchestrator...
+2026-01-26 21:16:11 | INFO     | 🧠 Form Intelligence Agent initialized with 3 plugins
+2026-01-26 21:16:11 | INFO     | 📝 Verification & Logging Agent initialized
+2026-01-26 21:16:11 | SUCCESS  | ✅ Orchestrator initialized
+2026-01-26 21:16:11 | INFO     | 🚀 Starting orchestrator...
+2026-01-26 21:16:11 | INFO     | 🚀 Starting browser automation agent...
+2026-01-26 21:16:12 | INFO     | 🔐 Using Chrome profile for authentication...
+2026-01-26 21:16:12 | WARNING  | Could not use Chrome profile: BrowserType.launch_persistent_context: Target page, context or browser has been closed
+Browser logs:
+
+<launching> C:\Program Files\Google\Chrome\Application\chrome.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=AcceptCHFrame,AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument,OptimizationHints --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --enable-automation --disable-infobars --disable-search-engine-choice-screen --disable-sync --no-sandbox --disable-blink-features=AutomationControlled --disable-dev-shm-usage --no-sandbox --disable-setuid-sandbox --disable-infobars --window-position=0,0 --ignore-certificate-errors --ignore-certificate-errors-spki-list --disable-blink-features --disable-features=IsolateOrigins,site-per-process --user-data-dir=C:\Users\90505\AppData\Local\Google\Chrome\User Data --remote-debugging-pipe about:blank
+<launched> pid=9348
+Call log:
+  - <launching> C:\Program Files\Google\Chrome\Application\chrome.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=AcceptCHFrame,AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument,OptimizationHints --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --enable-automation --disable-infobars --disable-search-engine-choice-screen --disable-sync --no-sandbox --disable-blink-features=AutomationControlled --disable-dev-shm-usage --no-sandbox --disable-setuid-sandbox --disable-infobars --window-position=0,0 --ignore-certificate-errors --ignore-certificate-errors-spki-list --disable-blink-features --disable-features=IsolateOrigins,site-per-process --user-data-dir=C:\Users\90505\AppData\Local\Google\Chrome\User Data --remote-debugging-pipe about:blank
+  - <launched> pid=9348
+  - [pid=9348] <gracefully close start>
+  - [pid=9348] <kill>
+  - [pid=9348] <will force kill>
+  - [pid=9348] taskkill stderr: ERROR: The process "9348" not found.
+  - [pid=9348] <process did exit: exitCode=21, signal=null>
+  - [pid=9348] starting temporary directories cleanup
+  - [pid=9348] finished temporary directories cleanup
+  - [pid=9348] <gracefully close end>
+
+2026-01-26 21:16:12 | INFO     | Falling back to Chromium...
+2026-01-26 21:16:12 | INFO     | Using Chromium with session file...
+2026-01-26 21:16:13 | SUCCESS  | ✅ Browser started successfully
+2026-01-26 21:16:13 | INFO     | 
+======================================================================
+2026-01-26 21:16:13 | INFO     | 🧪 TEST MODE
+2026-01-26 21:16:13 | INFO     | ======================================================================
+2026-01-26 21:16:13 | INFO     | 
+Paste a Microsoft Forms URL to test (or 'quit' to exit):
+
+2026-01-26 21:16:18 | INFO     | 
+============================================================
+2026-01-26 21:16:18 | INFO     | 🎯 Processing form: https://forms.office.com/Pages/ResponsePage.aspx?id=gCO8a9-CREaDOE-no4zyBZ_AEcdYFppHgDZ0tyK76ldUNzUwUjdPR0YxWEhFQ1IyMlBFRDdGN0w5Ry4u
+2026-01-26 21:16:18 | INFO     | ============================================================
+
+2026-01-26 21:16:18 | INFO     | ⏳ Checking rate limits...
+2026-01-26 21:16:18 | INFO     | Step 1/6: Opening form...
+2026-01-26 21:16:18 | INFO     | 🌐 Navigating to: https://forms.office.com/Pages/ResponsePage.aspx?id=gCO8a9-CREaDOE-no4zyBZ_AEcdYFppHgDZ0tyK76ldUNzUwUjdPR0YxWEhFQ1IyMlBFRDdGN0w5Ry4u
+2026-01-26 21:16:20 | SUCCESS  | ✅ Navigation complete
+2026-01-26 21:16:21 | INFO     | Step 2/6: Analyzing form structure...
+2026-01-26 21:16:21 | INFO     | 🔍 Starting form analysis...
+2026-01-26 21:16:21 | INFO     | ✅ Provider identified: microsoft_forms
+2026-01-26 21:16:21 | INFO     | 🔍 Analyzing Microsoft Forms structure...
+2026-01-26 21:16:31 | ERROR    | Form did not load properly: Page.wait_for_selector: Timeout 10000ms exceeded.
+Call log:
+  - waiting for locator("[data-automation-id=\"questionItem\"]") to be visible
+
+2026-01-26 21:16:31 | ERROR    | ❌ Form analysis failed
+2026-01-26 21:16:31 | ERROR    | 
+❌ FAILED: Form analysis failed
+
+2026-01-26 21:16:31 | INFO     | 🔍 Verifying submission...
+2026-01-26 21:16:31 | ERROR    | ❌ Submission failed
+2026-01-26 21:16:31 | ERROR    | Unexpected error: 'str' object has no attribute 'value'
+Traceback (most recent call last):
+
+  File "C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_filler\orchestrator.py", line 107, in process_form
+    raise Exception("Form analysis failed")
+
+Exception: Form analysis failed
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_filler\main.py", line 111, in <module>
+    main()
+    └ <function main at 0x000002896AC5F2E0>
+
+> File "C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_filler\main.py", line 83, in main
+    success = orchestrator.process_form(form_url)
+              │            │            └ 'https://forms.office.com/Pages/ResponsePage.aspx?id=gCO8a9-CREaDOE-no4zyBZ_AEcdYFppHgDZ0tyK76ldUNzUwUjdPR0YxWEhFQ1IyMlBFRDdG...
+              │            └ <function FormFillingOrchestrator.process_form at 0x000002896ACA9800>
+              └ <orchestrator.FormFillingOrchestrator object at 0x0000028969F801A0>
+
+  File "C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_filler\orchestrator.py", line 193, in process_form
+    self.verification_agent.verify_and_log(
+    │    │                  └ <function VerificationLoggerAgent.verify_and_log at 0x000002896B27A0C0>
+    │    └ <agents.verification_logger.VerificationLoggerAgent object at 0x000002896A3D6270>
+    └ <orchestrator.FormFillingOrchestrator object at 0x0000028969F801A0>
+
+  File "C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_filler\agents\verification_logger.py", line 150, in verify_and_log
+    submission_id = self._save_to_database(submission)
+                    │    │                 └ FormSubmission(id=None, timestamp=datetime.datetime(2026, 1, 26, 21, 16, 31, 364465), form_url='https://forms.office.com/Page...
+                    │    └ <function VerificationLoggerAgent._save_to_database at 0x000002896B27A160>
+                    └ <agents.verification_logger.VerificationLoggerAgent object at 0x000002896A3D6270>
+
+  File "C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_filler\agents\verification_logger.py", line 194, in _save_to_database
+    submission.form_provider.value,
+    │          └ 'microsoft_forms'
+    └ FormSubmission(id=None, timestamp=datetime.datetime(2026, 1, 26, 21, 16, 31, 364465), form_url='https://forms.office.com/Page...
+
+AttributeError: 'str' object has no attribute 'value'
+2026-01-26 21:18:42 | INFO     | 
+
+👋 Interrupted by user, exiting...
+2026-01-26 21:18:42 | INFO     | 🛑 Stopping orchestrator...
+2026-01-26 21:18:42 | INFO     | 🛑 Closing browser...
+2026-01-26 21:18:42 | WARNING  | Could not save session: BrowserContext.storage_state: Target page, context or browser has been closed
+2026-01-26 21:18:43 | SUCCESS  | ✅ Browser closed
+2026-01-26 21:18:43 | INFO     | 
+📊 Daily Stats: {'total': 0, 'successful': 0, 'failed': 0, 'captcha': 0, 'avg_processing_time': 0.0}
+
+2026-01-26 21:18:43 | INFO     | 
+======================================================================
+2026-01-26 21:18:43 | INFO     | 🛑 System shutdown complete
+2026-01-26 21:18:43 | INFO     | ======================================================================
+2026-01-26 21:18:47 | INFO     | Logging configured
+2026-01-26 21:18:47 | INFO     | ======================================================================
+2026-01-26 21:18:47 | INFO     | 🤖 WhatsApp Form Auto-Fill System - MVP Phase 1
+2026-01-26 21:18:47 | INFO     | ======================================================================
+2026-01-26 21:18:47 | INFO     | 👤 Student: Halil Eren Kepiç
+2026-01-26 21:18:47 | INFO     | 🆔 ID: 2306002093
+2026-01-26 21:18:47 | INFO     | 📁 Database: C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_filler\data\whatsapp_form_filler.db
+2026-01-26 21:18:47 | INFO     | 📂 Logs: C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_filler\logs
+2026-01-26 21:18:47 | INFO     | ======================================================================
+2026-01-26 21:18:47 | WARNING  | ⚠️  OpenAI API key not configured - AI fallback disabled
+2026-01-26 21:18:47 | INFO     | 🎭 Initializing Form Filling Orchestrator...
+2026-01-26 21:18:47 | INFO     | 🧠 Form Intelligence Agent initialized with 3 plugins
+2026-01-26 21:18:47 | INFO     | 📝 Verification & Logging Agent initialized
+2026-01-26 21:18:47 | SUCCESS  | ✅ Orchestrator initialized
+2026-01-26 21:18:47 | INFO     | 🚀 Starting orchestrator...
+2026-01-26 21:18:47 | INFO     | 🚀 Starting browser automation agent...
+2026-01-26 21:18:47 | INFO     | 🔐 Using Chrome profile for authentication...
+2026-01-26 21:19:18 | WARNING  | Could not use Chrome profile: BrowserType.launch_persistent_context: Target page, context or browser has been closed
+Browser logs:
+
+<launching> C:\Program Files\Google\Chrome\Application\chrome.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=AcceptCHFrame,AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument,OptimizationHints --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --enable-automation --disable-infobars --disable-search-engine-choice-screen --disable-sync --no-sandbox --disable-blink-features=AutomationControlled --disable-dev-shm-usage --no-sandbox --disable-setuid-sandbox --disable-infobars --window-position=0,0 --ignore-certificate-errors --ignore-certificate-errors-spki-list --disable-blink-features --disable-features=IsolateOrigins,site-per-process --user-data-dir=C:\Users\90505\AppData\Local\Google\Chrome\User Data --remote-debugging-pipe about:blank
+<launched> pid=18848
+[pid=18848][err] [18848:14304:0126/211847.967:ERROR:chrome\browser\os_crypt\app_bound_encryption_provider_win.cc:141] Unable to decrypt key. Result: Sistem belirtilen dosyayı bulamıyor. (0x80070002) GetLastError: 31
+[pid=18848][err] 
+[pid=18848][err] DevTools remote debugging requires a non-default data directory. Specify this using --user-data-dir.
+[pid=18848][err] Created TensorFlow Lite XNNPACK delegate for CPU.
+[pid=18848][err] [18848:18368:0126/211850.945:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+Call log:
+  - <launching> C:\Program Files\Google\Chrome\Application\chrome.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=AcceptCHFrame,AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument,OptimizationHints --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --enable-automation --disable-infobars --disable-search-engine-choice-screen --disable-sync --no-sandbox --disable-blink-features=AutomationControlled --disable-dev-shm-usage --no-sandbox --disable-setuid-sandbox --disable-infobars --window-position=0,0 --ignore-certificate-errors --ignore-certificate-errors-spki-list --disable-blink-features --disable-features=IsolateOrigins,site-per-process --user-data-dir=C:\Users\90505\AppData\Local\Google\Chrome\User Data --remote-debugging-pipe about:blank
+  - <launched> pid=18848
+  - [pid=18848][err] [18848:14304:0126/211847.967:ERROR:chrome\browser\os_crypt\app_bound_encryption_provider_win.cc:141] Unable to decrypt key. Result: Sistem belirtilen dosyayı bulamıyor. (0x80070002) GetLastError: 31
+  - [pid=18848][err]
+  - [pid=18848][err] DevTools remote debugging requires a non-default data directory. Specify this using --user-data-dir.
+  - [pid=18848][err] Created TensorFlow Lite XNNPACK delegate for CPU.
+  - [pid=18848][err] [18848:18368:0126/211850.945:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+  - [pid=18848] <gracefully close start>
+  - [pid=18848] <kill>
+  - [pid=18848] <will force kill>
+  - [pid=18848] taskkill stderr: ERROR: The process "18848" not found.
+  - [pid=18848] <process did exit: exitCode=0, signal=null>
+  - [pid=18848] starting temporary directories cleanup
+  - [pid=18848] finished temporary directories cleanup
+  - [pid=18848] <gracefully close end>
+
+2026-01-26 21:19:18 | INFO     | Falling back to Chromium...
+2026-01-26 21:19:18 | INFO     | Using Chromium with session file...
+2026-01-26 21:19:19 | SUCCESS  | ✅ Browser started successfully
+2026-01-26 21:19:19 | INFO     | 
+======================================================================
+2026-01-26 21:19:19 | INFO     | 🧪 TEST MODE
+2026-01-26 21:19:19 | INFO     | ======================================================================
+2026-01-26 21:19:19 | INFO     | 
+Paste a Microsoft Forms URL to test (or 'quit' to exit):
+
+2026-01-26 21:19:24 | INFO     | 
+
+👋 Interrupted by user, exiting...
+2026-01-26 21:19:24 | INFO     | 🛑 Stopping orchestrator...
+2026-01-26 21:19:24 | INFO     | 🛑 Closing browser...
+2026-01-26 21:19:24 | WARNING  | Could not save session: BrowserContext.storage_state: Target page, context or browser has been closed
+2026-01-26 21:19:24 | SUCCESS  | ✅ Browser closed
+2026-01-26 21:19:24 | INFO     | 
+📊 Daily Stats: {'total': 0, 'successful': 0, 'failed': 0, 'captcha': 0, 'avg_processing_time': 0.0}
+
+2026-01-26 21:19:24 | INFO     | 
+======================================================================
+2026-01-26 21:19:24 | INFO     | 🛑 System shutdown complete
+2026-01-26 21:19:24 | INFO     | ======================================================================
+2026-01-26 21:19:27 | INFO     | Logging configured
+2026-01-26 21:19:27 | INFO     | ======================================================================
+2026-01-26 21:19:27 | INFO     | 🤖 WhatsApp Form Auto-Fill System - MVP Phase 1
+2026-01-26 21:19:27 | INFO     | ======================================================================
+2026-01-26 21:19:27 | INFO     | 👤 Student: Halil Eren Kepiç
+2026-01-26 21:19:27 | INFO     | 🆔 ID: 2306002093
+2026-01-26 21:19:27 | INFO     | 📁 Database: C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_filler\data\whatsapp_form_filler.db
+2026-01-26 21:19:27 | INFO     | 📂 Logs: C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_filler\logs
+2026-01-26 21:19:27 | INFO     | ======================================================================
+2026-01-26 21:19:27 | WARNING  | ⚠️  OpenAI API key not configured - AI fallback disabled
+2026-01-26 21:19:27 | INFO     | 🎭 Initializing Form Filling Orchestrator...
+2026-01-26 21:19:27 | INFO     | 🧠 Form Intelligence Agent initialized with 3 plugins
+2026-01-26 21:19:27 | INFO     | 📝 Verification & Logging Agent initialized
+2026-01-26 21:19:27 | SUCCESS  | ✅ Orchestrator initialized
+2026-01-26 21:19:27 | INFO     | 🚀 Starting orchestrator...
+2026-01-26 21:19:27 | INFO     | 🚀 Starting browser automation agent...
+2026-01-26 21:19:28 | INFO     | 🔐 Using Chrome profile for authentication...
+2026-01-26 21:19:57 | WARNING  | Could not use Chrome profile: BrowserType.launch_persistent_context: Target page, context or browser has been closed
+Browser logs:
+
+<launching> C:\Program Files\Google\Chrome\Application\chrome.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=AcceptCHFrame,AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument,OptimizationHints --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --enable-automation --disable-infobars --disable-search-engine-choice-screen --disable-sync --no-sandbox --disable-blink-features=AutomationControlled --disable-dev-shm-usage --no-sandbox --disable-setuid-sandbox --disable-infobars --window-position=0,0 --ignore-certificate-errors --ignore-certificate-errors-spki-list --disable-blink-features --disable-features=IsolateOrigins,site-per-process --user-data-dir=C:\Users\90505\AppData\Local\Google\Chrome\User Data --remote-debugging-pipe about:blank
+<launched> pid=7096
+[pid=7096][err] [7096:9904:0126/211928.365:ERROR:chrome\browser\os_crypt\app_bound_encryption_provider_win.cc:141] Unable to decrypt key. Result: Sistem belirtilen dosyayı bulamıyor. (0x80070002) GetLastError: 31
+[pid=7096][err] 
+[pid=7096][err] DevTools remote debugging requires a non-default data directory. Specify this using --user-data-dir.
+[pid=7096][err] Created TensorFlow Lite XNNPACK delegate for CPU.
+[pid=7096][err] [7096:4676:0126/211932.125:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+Call log:
+  - <launching> C:\Program Files\Google\Chrome\Application\chrome.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=AcceptCHFrame,AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument,OptimizationHints --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --enable-automation --disable-infobars --disable-search-engine-choice-screen --disable-sync --no-sandbox --disable-blink-features=AutomationControlled --disable-dev-shm-usage --no-sandbox --disable-setuid-sandbox --disable-infobars --window-position=0,0 --ignore-certificate-errors --ignore-certificate-errors-spki-list --disable-blink-features --disable-features=IsolateOrigins,site-per-process --user-data-dir=C:\Users\90505\AppData\Local\Google\Chrome\User Data --remote-debugging-pipe about:blank
+  - <launched> pid=7096
+  - [pid=7096][err] [7096:9904:0126/211928.365:ERROR:chrome\browser\os_crypt\app_bound_encryption_provider_win.cc:141] Unable to decrypt key. Result: Sistem belirtilen dosyayı bulamıyor. (0x80070002) GetLastError: 31
+  - [pid=7096][err]
+  - [pid=7096][err] DevTools remote debugging requires a non-default data directory. Specify this using --user-data-dir.
+  - [pid=7096][err] Created TensorFlow Lite XNNPACK delegate for CPU.
+  - [pid=7096][err] [7096:4676:0126/211932.125:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+  - [pid=7096] <gracefully close start>
+  - [pid=7096] <kill>
+  - [pid=7096] <will force kill>
+  - [pid=7096] taskkill stderr: ERROR: The process "7096" not found.
+  - [pid=7096] <process did exit: exitCode=0, signal=null>
+  - [pid=7096] starting temporary directories cleanup
+  - [pid=7096] finished temporary directories cleanup
+  - [pid=7096] <gracefully close end>
+
+2026-01-26 21:19:57 | INFO     | Falling back to Chromium...
+2026-01-26 21:19:57 | INFO     | Using Chromium with session file...
+2026-01-26 21:19:57 | SUCCESS  | ✅ Browser started successfully
+2026-01-26 21:19:57 | INFO     | 
+======================================================================
+2026-01-26 21:19:57 | INFO     | 🧪 TEST MODE
+2026-01-26 21:19:57 | INFO     | ======================================================================
+2026-01-26 21:19:57 | INFO     | 
+Paste a Microsoft Forms URL to test (or 'quit' to exit):
+
+2026-01-26 21:22:02 | INFO     | 
+============================================================
+2026-01-26 21:22:02 | INFO     | 🎯 Processing form: https://forms.office.com/Pages/ResponsePage.aspx?id=gCO8a9-CREaDOE-no4zyBZ_AEcdYFppHgDZ0tyK76ldUNzUwUjdPR0YxWEhFQ1IyMlBFRDdGN0w5Ry4u
+2026-01-26 21:22:02 | INFO     | ============================================================
+
+2026-01-26 21:22:02 | INFO     | ⏳ Checking rate limits...
+2026-01-26 21:22:02 | INFO     | Step 1/6: Opening form...
+2026-01-26 21:22:02 | INFO     | 🌐 Navigating to: https://forms.office.com/Pages/ResponsePage.aspx?id=gCO8a9-CREaDOE-no4zyBZ_AEcdYFppHgDZ0tyK76ldUNzUwUjdPR0YxWEhFQ1IyMlBFRDdGN0w5Ry4u
+2026-01-26 21:22:02 | ERROR    | Navigation failed: Page.goto: Target page, context or browser has been closed
+2026-01-26 21:22:02 | ERROR    | 
+❌ FAILED: Failed to navigate to form
+
+2026-01-26 21:22:02 | ERROR    | Screenshot failed: Page.screenshot: Target page, context or browser has been closed
+2026-01-26 21:22:02 | INFO     | ✅ Provider identified: microsoft_forms
+2026-01-26 21:22:02 | INFO     | 🔍 Verifying submission...
+2026-01-26 21:22:02 | ERROR    | Unexpected error: Page.inner_text: Target page, context or browser has been closed
+Traceback (most recent call last):
+
+  File "C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_filler\main.py", line 111, in <module>
+    main()
+    └ <function main at 0x000002AD4D38F2E0>
+
+> File "C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_filler\main.py", line 83, in main
+    success = orchestrator.process_form(form_url)
+              │            │            └ 'https://forms.office.com/Pages/ResponsePage.aspx?id=gCO8a9-CREaDOE-no4zyBZ_AEcdYFppHgDZ0tyK76ldUNzUwUjdPR0YxWEhFQ1IyMlBFRDdG...
+              │            └ <function FormFillingOrchestrator.process_form at 0x000002AD4D3D9800>
+              └ <orchestrator.FormFillingOrchestrator object at 0x000002AD4CEE01A0>
+
+  File "C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_filler\orchestrator.py", line 193, in process_form
+    self.verification_agent.verify_and_log(
+    │    │                  └ <function VerificationLoggerAgent.verify_and_log at 0x000002AD4E15A0C0>
+    │    └ <agents.verification_logger.VerificationLoggerAgent object at 0x000002AD4D306270>
+    └ <orchestrator.FormFillingOrchestrator object at 0x000002AD4CEE01A0>
+
+  File "C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_filler\agents\verification_logger.py", line 115, in verify_and_log
+    page_text = page.inner_text('body')
+                │    └ <function Page.inner_text at 0x000002AD4DE1FBA0>
+                └ <Page url='https://forms.office.com/Pages/ResponsePage.aspx?id=gCO8a9-CREaDOE-no4zyBZ_AEcdYFppHgDZ0tyK76ldUNzUwUjdPR0YxWEhFQ1...
+
+  File "C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_filler\venv\Lib\site-packages\playwright\sync_api\_generated.py", line 10829, in inner_text
+    self._sync(
+    │    └ <function SyncBase._sync at 0x000002AD4DDF5300>
+    └ <Page url='https://forms.office.com/Pages/ResponsePage.aspx?id=gCO8a9-CREaDOE-no4zyBZ_AEcdYFppHgDZ0tyK76ldUNzUwUjdPR0YxWEhFQ1...
+  File "C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_filler\venv\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           │    └ <method 'result' of '_asyncio.Task' objects>
+           └ <Task finished name='Task-11' coro=<Page.inner_text() done, defined at C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_f...
+  File "C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_filler\venv\Lib\site-packages\playwright\_impl\_page.py", line 981, in inner_text
+    return await self._main_frame.inner_text(**locals_to_params(locals()))
+                 │    │           │            └ <function locals_to_params at 0x000002AD4DC5F100>
+                 │    │           └ <function Frame.inner_text at 0x000002AD4DD979C0>
+                 │    └ <Frame name= url='https://forms.office.com/Pages/ResponsePage.aspx?id=gCO8a9-CREaDOE-no4zyBZ_AEcdYFppHgDZ0tyK76ldUNzUwUjdPR0Y...
+                 └ <Page url='https://forms.office.com/Pages/ResponsePage.aspx?id=gCO8a9-CREaDOE-no4zyBZ_AEcdYFppHgDZ0tyK76ldUNzUwUjdPR0YxWEhFQ1...
+  File "C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_filler\venv\Lib\site-packages\playwright\_impl\_frame.py", line 712, in inner_text
+    return await self._channel.send(
+                 │    │        └ <function Channel.send at 0x000002AD4A8E2520>
+                 │    └ <playwright._impl._connection.Channel object at 0x000002AD4E275550>
+                 └ <Frame name= url='https://forms.office.com/Pages/ResponsePage.aspx?id=gCO8a9-CREaDOE-no4zyBZ_AEcdYFppHgDZ0tyK76ldUNzUwUjdPR0Y...
+  File "C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_filler\venv\Lib\site-packages\playwright\_impl\_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+                 │    │           └ <function Connection.wrap_api_call at 0x000002AD4DC9A480>
+                 │    └ <playwright._impl._connection.Connection object at 0x000002AD4E057A10>
+                 └ <playwright._impl._connection.Channel object at 0x000002AD4E275550>
+  File "C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_filler\venv\Lib\site-packages\playwright\_impl\_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+          │                       └ {'frames': [{'file': 'C:\\Users\\90505\\OneDrive\\Desktop\\halilo\\whatsapp_form_filler\\agents\\verification_logger.py', 'li...
+          └ <function rewrite_error at 0x000002AD4D3DAD40>
+
+playwright._impl._errors.TargetClosedError: Page.inner_text: Target page, context or browser has been closed
+2026-01-26 21:22:05 | INFO     | 
+
+👋 Interrupted by user, exiting...
+2026-01-26 21:22:05 | INFO     | 🛑 Stopping orchestrator...
+2026-01-26 21:22:05 | INFO     | 🛑 Closing browser...
+2026-01-26 21:22:05 | WARNING  | Could not save session: BrowserContext.storage_state: Target page, context or browser has been closed
+2026-01-26 21:22:06 | SUCCESS  | ✅ Browser closed
+2026-01-26 21:22:06 | INFO     | 
+📊 Daily Stats: {'total': 0, 'successful': 0, 'failed': 0, 'captcha': 0, 'avg_processing_time': 0.0}
+
+2026-01-26 21:22:06 | INFO     | 
+======================================================================
+2026-01-26 21:22:06 | INFO     | 🛑 System shutdown complete
+2026-01-26 21:22:06 | INFO     | ======================================================================
+2026-01-26 21:22:09 | INFO     | Logging configured
+2026-01-26 21:22:09 | INFO     | ======================================================================
+2026-01-26 21:22:09 | INFO     | 🤖 WhatsApp Form Auto-Fill System - MVP Phase 1
+2026-01-26 21:22:09 | INFO     | ======================================================================
+2026-01-26 21:22:09 | INFO     | 👤 Student: Halil Eren Kepiç
+2026-01-26 21:22:09 | INFO     | 🆔 ID: 2306002093
+2026-01-26 21:22:09 | INFO     | 📁 Database: C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_filler\data\whatsapp_form_filler.db
+2026-01-26 21:22:09 | INFO     | 📂 Logs: C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_filler\logs
+2026-01-26 21:22:09 | INFO     | ======================================================================
+2026-01-26 21:22:09 | WARNING  | ⚠️  OpenAI API key not configured - AI fallback disabled
+2026-01-26 21:22:09 | INFO     | 🎭 Initializing Form Filling Orchestrator...
+2026-01-26 21:22:09 | INFO     | 🧠 Form Intelligence Agent initialized with 3 plugins
+2026-01-26 21:22:09 | INFO     | 📝 Verification & Logging Agent initialized
+2026-01-26 21:22:09 | SUCCESS  | ✅ Orchestrator initialized
+2026-01-26 21:22:09 | INFO     | 🚀 Starting orchestrator...
+2026-01-26 21:22:09 | INFO     | 🚀 Starting browser automation agent...
+2026-01-26 21:22:09 | INFO     | 🔐 Using Chrome profile for authentication...
+2026-01-26 21:23:37 | WARNING  | Could not use Chrome profile: BrowserType.launch_persistent_context: Target page, context or browser has been closed
+Browser logs:
+
+<launching> C:\Program Files\Google\Chrome\Application\chrome.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=AcceptCHFrame,AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument,OptimizationHints --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --enable-automation --disable-infobars --disable-search-engine-choice-screen --disable-sync --no-sandbox --disable-blink-features=AutomationControlled --disable-dev-shm-usage --no-sandbox --disable-setuid-sandbox --disable-infobars --window-position=0,0 --ignore-certificate-errors --ignore-certificate-errors-spki-list --disable-blink-features --disable-features=IsolateOrigins,site-per-process --user-data-dir=C:\Users\90505\AppData\Local\Google\Chrome\User Data --remote-debugging-pipe about:blank
+<launched> pid=10812
+[pid=10812][err] [10812:16212:0126/212209.858:ERROR:chrome\browser\os_crypt\app_bound_encryption_provider_win.cc:141] Unable to decrypt key. Result: Sistem belirtilen dosyayı bulamıyor. (0x80070002) GetLastError: 31
+[pid=10812][err] 
+[pid=10812][err] DevTools remote debugging requires a non-default data directory. Specify this using --user-data-dir.
+[pid=10812][err] Created TensorFlow Lite XNNPACK delegate for CPU.
+[pid=10812][err] [10812:7524:0126/212212.829:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[pid=10812][err] [10812:7524:0126/212241.919:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[pid=10812][err] [10812:7524:0126/212333.544:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: QUOTA_EXCEEDED
+Call log:
+  - <launching> C:\Program Files\Google\Chrome\Application\chrome.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=AcceptCHFrame,AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument,OptimizationHints --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --enable-automation --disable-infobars --disable-search-engine-choice-screen --disable-sync --no-sandbox --disable-blink-features=AutomationControlled --disable-dev-shm-usage --no-sandbox --disable-setuid-sandbox --disable-infobars --window-position=0,0 --ignore-certificate-errors --ignore-certificate-errors-spki-list --disable-blink-features --disable-features=IsolateOrigins,site-per-process --user-data-dir=C:\Users\90505\AppData\Local\Google\Chrome\User Data --remote-debugging-pipe about:blank
+  - <launched> pid=10812
+  - [pid=10812][err] [10812:16212:0126/212209.858:ERROR:chrome\browser\os_crypt\app_bound_encryption_provider_win.cc:141] Unable to decrypt key. Result: Sistem belirtilen dosyayı bulamıyor. (0x80070002) GetLastError: 31
+  - [pid=10812][err]
+  - [pid=10812][err] DevTools remote debugging requires a non-default data directory. Specify this using --user-data-dir.
+  - [pid=10812][err] Created TensorFlow Lite XNNPACK delegate for CPU.
+  - [pid=10812][err] [10812:7524:0126/212212.829:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+  - [pid=10812][err] [10812:7524:0126/212241.919:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+  - [pid=10812][err] [10812:7524:0126/212333.544:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: QUOTA_EXCEEDED
+  - [pid=10812] <gracefully close start>
+  - [pid=10812] <kill>
+  - [pid=10812] <will force kill>
+  - [pid=10812] taskkill stderr: ERROR: The process "10812" not found.
+  - [pid=10812] <process did exit: exitCode=0, signal=null>
+  - [pid=10812] starting temporary directories cleanup
+  - [pid=10812] finished temporary directories cleanup
+  - [pid=10812] <gracefully close end>
+
+2026-01-26 21:23:37 | INFO     | Falling back to Chromium...
+2026-01-26 21:23:37 | INFO     | Using Chromium with session file...
+2026-01-26 21:23:37 | SUCCESS  | ✅ Browser started successfully
+2026-01-26 21:23:37 | INFO     | 
+======================================================================
+2026-01-26 21:23:37 | INFO     | 🧪 TEST MODE
+2026-01-26 21:23:37 | INFO     | ======================================================================
+2026-01-26 21:23:37 | INFO     | 
+Paste a Microsoft Forms URL to test (or 'quit' to exit):
+
+2026-01-26 21:24:11 | INFO     | 
+
+👋 Interrupted by user, exiting...
+2026-01-26 21:24:11 | INFO     | 🛑 Stopping orchestrator...
+2026-01-26 21:24:11 | INFO     | 🛑 Closing browser...
+2026-01-26 21:24:11 | WARNING  | Could not save session: BrowserContext.storage_state: Target page, context or browser has been closed
+2026-01-26 21:24:12 | SUCCESS  | ✅ Browser closed
+2026-01-26 21:24:12 | INFO     | 
+📊 Daily Stats: {'total': 0, 'successful': 0, 'failed': 0, 'captcha': 0, 'avg_processing_time': 0.0}
+
+2026-01-26 21:24:12 | INFO     | 
+======================================================================
+2026-01-26 21:24:12 | INFO     | 🛑 System shutdown complete
+2026-01-26 21:24:12 | INFO     | ======================================================================
+2026-01-26 21:27:40 | INFO     | Logging configured
+2026-01-26 21:27:40 | INFO     | ======================================================================
+2026-01-26 21:27:40 | INFO     | 🤖 WhatsApp Form Auto-Fill System - MVP Phase 1
+2026-01-26 21:27:40 | INFO     | ======================================================================
+2026-01-26 21:27:40 | INFO     | 👤 Student: Halil Eren Kepiç
+2026-01-26 21:27:40 | INFO     | 🆔 ID: 2306002093
+2026-01-26 21:27:40 | INFO     | 📁 Database: C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_filler\data\whatsapp_form_filler.db
+2026-01-26 21:27:40 | INFO     | 📂 Logs: C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_filler\logs
+2026-01-26 21:27:40 | INFO     | ======================================================================
+2026-01-26 21:27:40 | WARNING  | ⚠️  OpenAI API key not configured - AI fallback disabled
+2026-01-26 21:27:40 | INFO     | 🎭 Initializing Form Filling Orchestrator...
+2026-01-26 21:27:40 | INFO     | 🧠 Form Intelligence Agent initialized with 3 plugins
+2026-01-26 21:27:40 | INFO     | 📝 Verification & Logging Agent initialized
+2026-01-26 21:27:40 | SUCCESS  | ✅ Orchestrator initialized
+2026-01-26 21:27:40 | INFO     | 🚀 Starting orchestrator...
+2026-01-26 21:27:40 | INFO     | 🚀 Starting browser automation agent...
+2026-01-26 21:27:41 | INFO     | 🔐 Using Chrome Default profile for authentication...
+2026-01-26 21:27:41 | INFO     | Ensuring Chrome is closed...
+2026-01-26 21:28:32 | INFO     | 
+👋 Goodbye!
+2026-01-26 21:28:37 | INFO     | Logging configured
+2026-01-26 21:28:37 | INFO     | ======================================================================
+2026-01-26 21:28:37 | INFO     | 🤖 WhatsApp Form Auto-Fill System - MVP Phase 1
+2026-01-26 21:28:37 | INFO     | ======================================================================
+2026-01-26 21:28:37 | INFO     | 👤 Student: Halil Eren Kepiç
+2026-01-26 21:28:37 | INFO     | 🆔 ID: 2306002093
+2026-01-26 21:28:37 | INFO     | 📁 Database: C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_filler\data\whatsapp_form_filler.db
+2026-01-26 21:28:37 | INFO     | 📂 Logs: C:\Users\90505\OneDrive\Desktop\halilo\whatsapp_form_filler\logs
+2026-01-26 21:28:37 | INFO     | ======================================================================
+2026-01-26 21:28:37 | WARNING  | ⚠️  OpenAI API key not configured - AI fallback disabled
+2026-01-26 21:28:37 | INFO     | 🎭 Initializing Form Filling Orchestrator...
+2026-01-26 21:28:37 | INFO     | 🧠 Form Intelligence Agent initialized with 3 plugins
+2026-01-26 21:28:37 | INFO     | 📝 Verification & Logging Agent initialized
+2026-01-26 21:28:37 | SUCCESS  | ✅ Orchestrator initialized
+2026-01-26 21:28:37 | INFO     | 🚀 Starting orchestrator...
+2026-01-26 21:28:37 | INFO     | 🚀 Starting browser automation agent...
+2026-01-26 21:28:38 | INFO     | 🔐 Using Chrome Default profile for authentication...
+2026-01-26 21:28:38 | INFO     | Ensuring Chrome is closed...
+2026-01-26 21:29:15 | INFO     | 
+👋 Goodbye!
